@@ -1,0 +1,81 @@
+export const months = [
+	"January",
+	"February",
+	"March",
+	"April",
+	"May",
+	"June",
+	"July",
+	"August",
+	"September",
+	"October",
+	"November",
+	"December"
+];
+
+
+
+
+
+
+
+
+
+export const languages = [
+	{ label: "Azərbaycan", value: "az" },
+	{ label: "Bahasa Indonesia", value: "id-ID" },
+	{ label: "Bahasa Melayu", value: "ms-MY" },
+	{ label: "Basa Jawa", value: "jv-ID" },
+	{ label: "Català", value: "ca" },
+	{ label: "Cebuano", value: "ceb-PH" },
+	{ label: "Čeština", value: "cs-CZ" },
+	{ label: "Dansk", value: "da" },
+	{ label: "Deutsch", value: "de-DE" },
+	{ label: "Eesti", value: "et" },
+	{ label: "English (UK)", value: "en-GB" },
+	{ label: "English (US)", value: "en" },
+	{ label: "Español", value: "es" },
+	{ label: "Español (Latinoamérica)", value: "es-419" },
+	{ label: "Filipino", value: "fil-PH" },
+	{ label: "Français", value: "fr" },
+	{ label: "Français (Canada)", value: "fr-CA" },
+	{ label: "Gaeilge", value: "ga" },
+	{ label: "Hrvatski", value: "hr" },
+	{ label: "Íslenska", value: "is" },
+	{ label: "Italiano", value: "it-IT" },
+	{ label: "Kiswahili", value: "sw" },
+	{ label: "Latviešu", value: "lv" },
+	{ label: "Lietuvių", value: "lt" },
+	{ label: "Magyar", value: "hu-HU" },
+	{ label: "Nederlands", value: "nl-NL" },
+	{ label: "norsk (bokmål)", value: "nb" },
+	{ label: "Oʻzbek", value: "uz" },
+	{ label: "Polski", value: "pl-PL" },
+	{ label: "Português", value: "pt" },
+	{ label: "Português (Brasil)", value: "pt-BR" },
+	{ label: "Română", value: "ro-RO" },
+	{ label: "Shqip", value: "sq" },
+	{ label: "Slovenčina", value: "sk" },
+	{ label: "Slovenščina", value: "sl" },
+	{ label: "Suomi", value: "fi-FI" },
+	{ label: "Svenska", value: "sv-SE" },
+	{ label: "Tiếng Việt", value: "vi-VN" },
+	{ label: "Türkçe", value: "tr-TR" },
+	{ label: "Ελληνικά", value: "el-GR" },
+	{ label: "Български", value: "bg" },
+	{ label: "Қазақша", value: "kk" },
+	{ label: "Русский", value: "ru-RU" },
+	{ label: "Українська", value: "uk-UA" },
+	{ label: "עברית", value: "he-IL" },
+	{ label: "اردو", value: "ur" },
+	{ label: "العربية", value: "ar" },
+	{ label: "हिंदी", value: "hi-IN" },
+	{ label: "বাংলা", value: "bn-IN" },
+	{ label: "ภาษาไทย", value: "th-TH" },
+	{ label: "မြန်မာ", value: "my-MM" },
+	{ label: "ខ្មែរ", value: "km-KH" },
+	{ label: "日本語", value: "ja-JP" },
+	{ label: "中文 (繁體)", value: "zh-Hant-TW" },
+	{ label: "中文 (简体)", value: "zh-Hans" },
+	{ label: "한국어", value: "ko-KR" }
+];

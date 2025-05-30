@@ -2,20 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
+
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+
+    --radius: 0.5rem;
+
+    --tiktok: 348 99% 58%;
+    --classlink: 201 100% 42%;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+::-webkit-scrollbar {
+  width: 8px;
 }
+
+::-webkit-scrollbar-corner {
+  appearance: none;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 16px;
+  border-radius: 16px;
+  background: rgb(241, 241, 242);
+}
+
+
+@layer base {
+  * {
+    @apply border-border transition-all;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  a {
+  }
+  
+  .tiktok {
+    @apply [&_a:hover]:underline;
+    font-family: Arial, Tahoma, sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-shadow {
+    text-shadow: #000000 1px 1px 1px;
+  }
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+}
+
