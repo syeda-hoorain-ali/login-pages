@@ -48,7 +48,7 @@
   }
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 8px;
 }
 
@@ -60,7 +60,7 @@
   -webkit-border-radius: 16px;
   border-radius: 16px;
   background: rgb(241, 241, 242);
-}
+} */
 
 
 @layer base {
@@ -72,9 +72,8 @@
     @apply bg-background text-foreground;
   }
 
-  a {
-  }
-  
+  a {}
+
   .tiktok {
     @apply [&_a:hover]:underline;
     font-family: Arial, Tahoma, sans-serif;
@@ -85,8 +84,31 @@
   .text-shadow {
     text-shadow: #000000 1px 1px 1px;
   }
+
   .flex-center {
     @apply flex items-center justify-center;
   }
 }
 
+.ixl-login-background {
+  background-repeat: no-repeat;
+  background-position-x: 50%, 50%;
+  background-position-y: 100%, 0%;
+  background-size: 1919px 440px, 1919px calc(100% - 50px);
+  
+  background-image: image-set(url("https://www.ixl.com/dv3/fGtRZc8ApSlhIGG0_TceL_cDhzY/yui3/signin-page/assets/signin-section-background-back-661.png") 1x,url("https://www.ixl.com/dv3/fGtRZc8ApSlhIGG0_TceL_cDhzY/yui3/signin-page/assets/signin-section-background-back-661-2x.png") 2x,url("https://www.ixl.com/dv3/fGtRZc8ApSlhIGG0_TceL_cDhzY/yui3/signin-page/assets/signin-section-background-back-661-3x.png") 3x),linear-gradient(to bottom,#63d6cd,#95eae7 32%,#efffa8);
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 9.125rem;
+
+    background-position-x: 50%;
+    background-position-y: 100%;
+    background-size: 1919px 440px;
+    background-image: image-set(url("https://www.ixl.com/dv3/fGtRZc8ApSlhIGG0_TceL_cDhzY/yui3/signin-page/assets/signin-section-background-front-661.png") 1x, url("https://www.ixl.com/dv3/fGtRZc8ApSlhIGG0_TceL_cDhzY/yui3/signin-page/assets/signin-section-background-front-661-2x.png") 2x, url("https://www.ixl.com/dv3/fGtRZc8ApSlhIGG0_TceL_cDhzY/yui3/signin-page/assets/signin-section-background-front-661-3x.png") 3x);
+  }
+}

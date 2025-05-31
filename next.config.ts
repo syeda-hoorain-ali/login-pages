@@ -7,6 +7,7 @@ const nextConfig: NextConfig = {
       { hostname: "cdn.classlink.com" },
       { hostname: "cf.quizizz.com" },
       { hostname: 'www.gimkit.com' },
+      { hostname: 'www.ixl.com' },
     ]
   }
 };
