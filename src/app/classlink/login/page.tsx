@@ -1,12 +1,12 @@
 "use client";
 
-import { ClassLinkIcon, ExternalLinkIcon, WindowsIcon } from "@/components/classlink/icons";
+import Link from "next/link";
+import Image from "next/image";
+import { useState } from "react";
+import { Open_Sans, Roboto } from "next/font/google";
 import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
-import { Open_Sans, Roboto } from "next/font/google"
-import Image from "next/image"
-import Link from "next/link"
-import { useState } from "react"
+import { FormField } from "@/components/classlink/form-field";
+import { ClassLinkIcon, ExternalLinkIcon, WindowsIcon } from "@/components/classlink/icons";
 
 
 const roboto = Roboto({
@@ -34,33 +34,6 @@ const Page = () => {
     setForm((prev) => ({ ...prev, [e.target.id]: e.target.value }))
   }
 
-  const renderInput = (
-    id: keyof typeof form,
-    type: string,
-    label: string
-  ) => (
-    <div className="relative">
-      <input
-        type={type}
-        id={id}
-        placeholder=" "
-        value={form[id]}
-        onChange={handleChange}
-        className="peer w-full h-[3.75rem] p-4 pb-2.5 border-2 border-[#555] outline-classlink focus:outline-2 outline-offset-[6px] rounded-md text-[#555] text-sm font-medium"
-      />
-      <label
-        htmlFor={id}
-        className={cn(
-          "absolute left-[15px] text-[#333] font-semibold transition-all duration-200",
-          openSans.className,
-          form[id] ? 'top-2 text-[11px]' : 'top-4 text-base text-[#555]',
-          "peer-focus:top-2 peer-focus:text-[11px]"
-        )}
-      >
-        {label}
-      </label>
-    </div>
-  )
 
   return (<>
     <div className="relative pt-14 min-h-dvh bg-[#E2F0FD]">
@@ -78,10 +51,29 @@ const Page = () => {
 
         <div className="mt-6 space-y-5">
 
-          {renderInput('username', 'text', 'Username')}
-          {renderInput('password', 'password', 'Password')}
-          {renderInput('code', 'text', 'Code (optional)')}
+          <FormField
+            id="username"
+            label="Username"
+            type="text"
+            value={form.username}
+            onChange={handleChange}
+          />
 
+          <FormField
+            id="password"
+            label="Password"
+            type="password"
+            value={form.password}
+            onChange={handleChange}
+          />
+          
+          <FormField
+            id="code"
+            label="Code (optional)"
+            type="text"
+            value={form.code}
+            onChange={handleChange}
+          />
 
           <Button className="w-full h-[3.75rem] p-4 pb-2.5 bg-[#004ae6] hover:bg-[#005aff] shadow-[rgba(0,0,0,.25)_0_2px_4px]">
             <span className={`font-semibold text-xl text-shadow ${openSans.className}`}>Sign In</span>
