@@ -4,8 +4,9 @@ import { Open_Sans } from "next/font/google";
 
 
 const openSans = Open_Sans({
-  variable: "--font-open-sans",
-  fallback: ["sans-serif"]
+	subsets: ["latin"],
+	variable: "--font-open-sans",
+	fallback: ["sans-serif"]
 });
 
 export const metadata: Metadata = {

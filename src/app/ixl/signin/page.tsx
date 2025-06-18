@@ -10,6 +10,7 @@ import { Roboto_Slab } from "next/font/google"
 
 
 const robotoSlab = Roboto_Slab({
+  subsets: ['latin'],
   fallback: ['sans-serif']
 })
 
