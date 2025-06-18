@@ -1,10 +1,10 @@
 import Image from "next/image"
 import Link from "next/link"
-import { Button } from "../ui/button"
+import { Button } from "@/components/ui/button"
 
 const Navbar = () => {
   return (<>
-    <nav className="bg-[#461A42] z-10 w-full shadow-xl shadow-black border-black border-b">
+    <nav className="sticky top-0 bg-[#461A42] z-10 w-full shadow-lg">
       <div className="max-w-screen-xl p-4 mx-auto flex items-center justify-between">
 
         <Link href="#">
@@ -18,8 +18,8 @@ const Navbar = () => {
         </Link>
 
         <div>
-          <Button variant="ghost" className="text-white">Join a game</Button>
-          <Button variant="secondary">Sign up</Button>
+          <Button variant="ghost" className="text-white text-xs font-semibold">Join a game</Button>
+          <Button variant="secondary" className="text-[#090909] text-xs font-semibold">Sign up</Button>
         </div>
 
       </div>

@@ -1,82 +1,160 @@
-import Navbar from "@/components/quizizz/navbar";
+import { ArrowRightIcon } from "@/components/quizizz/icons";
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 const page = () => {
-	return (<>
+  return (<>
+    <div className="h-full flex items-center justify-center ">
+      <div className="bg-white flex h-144 w-195 shadow-lg rounded-b-lg overflow-hidden">
 
-		<Navbar />
-		<main className="min-h-screen bg-[#401F43] flex items-center justify-center font-sans">
-			<div className="bg-white flex w-[900px] rounded-md -mt-7 overflow-hidden shadow-lg">
-				{/* Left - Login Panel */}
-				<div className="w-[55%] px-10 py-12">
-					<h1 className="text-xl font-semibold text-[#1F1F1F] mb-8">Log in to Quizizz</h1>
+        {/* Left - Login Panel */}
+        <div className="w-120 h-full flex flex-col bg-[#f9f9f9]">
+          <div className="h-full p-4 md:p-10">
+            <h1 className="text-xl font-semibold text-[#1F1F1F]">Log in to Quizizz</h1>
 
-					{/* Google Login */}
-					<button className="flex items-center justify-between w-full border border-[#E5E7EB] rounded-md px-4 py-3 mb-3 hover:bg-gray-50 transition">
-						<span className="flex items-center gap-3 text-[#1F1F1F] text-sm font-medium">
-							<img src="https://img.icons8.com/color/20/google-logo.png" alt="Google" />
-							Continue with Google
-						</span>
-						<span className="text-[#6B7280]">→</span>
-					</button>
 
-					{/* Email Login */}
-					<button className="flex items-center justify-between w-full border border-[#E5E7EB] rounded-md px-4 py-3 mb-3 hover:bg-gray-50 transition">
-						<span className="flex items-center gap-3 text-[#1F1F1F] text-sm font-medium">
-							<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
-								<path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25H4.5a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5H4.5a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91A2.25 2.25 0 012.25 6.993V6.75" />
-							</svg>
-							Continue with Email
-						</span>
-						<span className="text-[#6B7280]">→</span>
-					</button>
+            <section className="flex flex-col gap-3 mt-4">
 
-					{/* Microsoft Login */}
-					<button className="flex items-center justify-between w-full border border-[#E5E7EB] rounded-md px-4 py-3 mb-6 hover:bg-gray-50 transition">
-						<span className="flex items-center gap-3 text-[#1F1F1F] text-sm font-medium">
-							<img src="https://img.icons8.com/color/20/microsoft.png" alt="Microsoft" />
-							Continue with Microsoft
-						</span>
-						<span className="text-[#6B7280]">→</span>
-					</button>
+              {/* Google Login */}
+              <Button variant="quizizz" size="quizizz">
 
-					{/* Separator */}
-					<div className="text-center text-xs text-[#6B7280] mb-5">or continue with</div>
+                <span className="flex items-center gap-4 text-[#1F1F1F] text-base font-semibold">
+                  <Image
+                    src="https://cf.quizizz.com/img/logos/google-logo-1.png"
+                    alt="Google"
+                    width={16}
+                    height={16}
+                    className="w-4 h-4 object-contain"
+                  />
+                  Continue with Google
+                </span>
 
-					{/* Other options */}
-					<div className="flex items-center justify-center gap-6 mb-8">
-						<button className="bg-[#3b5998] text-white w-10 h-10 p-1 rounded flex items-center justify-center">
-							<img src="https://cf.quizizz.com/image/Facebook.png"  width={72} height={72}/>
-						</button>
-						<button className="bg-black text-white w-10 h-10 p-1 rounded flex items-center justify-center">
-							<img src="https://cf.quizizz.com/image/Apple.png"  width={72} height={72}/>
-						</button>
-						<button className="bg-purple-600 text-white w-10 h-10 p-2 rounded flex items-center justify-center">
-							<Image src="https://cf.quizizz.com/image/shield-halved.png" alt="" width={60} height={0}/>
-						</button>
-					</div>
+                <ArrowRightIcon color="#b6b6b6" className="size-4 text-[#b6b6b6] hover:text-[#461A42]" />
+              </Button>
 
-					<div className="text-center text-sm text-[#6B7280]">
-						Don’t have an account?{' '}
-						<a href="#" className="text-[#6B4EFF] font-medium hover:underline">Sign up</a>
-					</div>
-				</div>
 
-				{/* Right - Image Panel */}
-				<div className="w-[45%] relative bg-[#F3F4F6] h-[550px]">
-					<img
-						src="https://cf.quizizz.com/image/classroom-enjoyment_optim.webp"
-						alt="Classroom"
-						className="w-full h-full object-cover"
-					/>
-					<div className="absolute bottom-0 w-full bg-black/70 text-white p-4 text-xs">
-						<strong>Teachers love us 😍</strong>
-						<p>Join over 200 million educators and learners on Quizizz</p>
-					</div>
-				</div>
-			</div>
-		</main>
-	</>);
+              {/* Email Login */}
+              <Button variant="quizizz" size="quizizz">
+
+                <span className="flex items-center gap-4 text-[#1F1F1F] text-base font-semibold">
+                  <Image
+                    src="https://cf.quizizz.com/image/envelope-regular.png"
+                    alt="Email"
+                    width={16}
+                    height={16}
+                    className="w-4 h-4 object-contain"
+                  />
+                  Continue with Email
+                </span>
+
+                <ArrowRightIcon color="#b6b6b6" className="size-4 text-[#b6b6b6] hover:text-[#461A42]" />
+              </Button>
+
+
+              {/* Microsoft Login */}
+              <Button variant="quizizz" size="quizizz">
+
+                <span className="flex items-center gap-4 text-[#1F1F1F] text-base font-semibold">
+                  <Image
+                    src="https://cf.quizizz.com/img/logos/ms-logo.png"
+                    alt="Microsoft"
+                    width={16}
+                    height={16}
+                    className="w-4 h-4 object-contain"
+                  />
+                  Continue with Microsoft
+                </span>
+
+                <ArrowRightIcon color="#b6b6b6" className="size-4 text-[#b6b6b6] hover:text-[#461A42]" />
+              </Button>
+
+            </section>
+
+
+            {/* Separator */}
+            <div className="text-center text-sm text-[#6d6d6d] my-4">or continue with</div>
+
+
+            {/* Other options */}
+            <div className="flex items-center justify-center gap-4 mb-8">
+
+              <div className="flex flex-col items-center gap-1">
+                <Button size="icon" className="bg-[#3d6ad6] hover:bg-[#3d6ad6]">
+                  <Image
+                    src="https://cf.quizizz.com/image/Facebook.png"
+                    alt="Facebook"
+                    width={24}
+                    height={24}
+                    className="size-6 object-contain"
+                  />
+                </Button>
+
+                <span className="text-[#222] text-[10px]">Facebook</span>
+              </div>
+
+
+              <div className="flex flex-col items-center gap-1">
+                <Button size="icon" className="bg-[#222] hover:bg-[#222]">
+                  <Image
+                    src="https://cf.quizizz.com/image/Apple.png"
+                    alt="Facebook"
+                    width={24}
+                    height={24}
+                    className="size-6 object-contain"
+                  />
+                </Button>
+
+                <span className="text-[#222] text-[10px]">Apple</span>
+              </div>
+
+
+              <div className="flex flex-col items-center gap-1">
+                <Button size="icon" className="bg-[#8854c0] hover:bg-[#8854c0]">
+                  <Image
+                    src="https://cf.quizizz.com/image/shield-halved.png"
+                    alt="Others"
+                    width={24}
+                    height={24}
+                    className="size-6 object-contain"
+                  />
+                </Button>
+
+                <span className="text-[#222] text-[10px]">Others</span>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div className="py-4 text-center text-sm text-[#6B7280]">
+            <span className="text-[#222] text-sm">Don&apos;t have an account?</span> {' '}
+            <button className="bg-[#ede6f6] rounded px-3 py-1 text-[#6B4EFF] text-xs font-semibold ml-2 cursor-pointer">Sign up</button>
+          </div>
+
+        </div>
+
+
+        {/* Right - Image Panel */}
+        <div className="w-75 relative bg-[#F3F4F6] h-full">
+          <img
+            src="https://cf.quizizz.com/image/classroom-enjoyment_optim.webp"
+            alt="Classroom"
+            className="w-full h-full object-cover"
+          />
+
+
+          <div className="absolute bottom-0 w-full h-28 bg-black/80 text-white p-4 text-sm 
+          flex flex-col backdrop-blur-sm">
+            <span className="pb-2 text-sm font-semibold text-white">Teachers love us &nbsp;😍 </span>
+            <p className="text-sm font-semibold text-white/80">Join over 200 million educators and learners on Quizizz</p>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </>);
 }
 
 export default page

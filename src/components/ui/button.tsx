@@ -20,6 +20,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         tiktok: "bg-tiktok hover:bg-tiktok/90",
+        quizizz: "bg-transparent justify-between border border-[#f2f2f2] hover:shadow-md",
       },
       size: {
         default: "h-9 px-4 py-2",
@@ -28,6 +29,7 @@ const buttonVariants = cva(
         icon: "h-9 w-9",
         gimkit: "disabled:pointer-events-all disabled:cursor-not-allowed hover:border-[#4096ff] duration-300",
         tiktok: "h-[2.625rem] px-3 rounded-lg text-[15px] font-semibold [&_svg]:size-5",
+        quizizz: "w-full px-4 py-4 h-10 md:text-base",
       },
     },
     defaultVariants: {
