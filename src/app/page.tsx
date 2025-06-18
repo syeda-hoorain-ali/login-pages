@@ -5,7 +5,7 @@ const buttons = [
   { label: "Classlink", href: "/classlink" },
   { label: "Classlink Login", href: "/classlink/login" },
   { label: "IXL Sign In", href: "/ixl/signin" },
-  { label: "Quizizz Login", href: "/quizziz/login" },
+  { label: "Quizizz Login", href: "/quizizz/login" },
   { label: "TikTok Login", href: "/tiktok/login" },
   { label: "TikTok Signup", href: "/tiktok/signup" },
 ];
